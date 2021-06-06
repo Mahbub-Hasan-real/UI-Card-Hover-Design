@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right, #5a5c5c, rgb(58, 63, 63));
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card
+{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #2e2e2e;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.589);
+    overflow: hidden;
+}
+.card::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(87, 170, 4);
+    clip-path: circle(150px at 80% 20%);
+    transition: .3s ease;
+}
+.card:hover::before
+{
+    clip-path: circle(350px at 80% -40%);
+}
+.card::after
+{
+    content: 'Nike';
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11em;
+    opacity: .2;
+    color: gray;
+    font-style: italic;
+}
+.imgbx
+{
+    position: absolute;
+    top: 50%;
+    left:25px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 250px;
+    transition: .3s;
+}
+.card:hover .imgbx
+{
+    top: 0%;
+    transform: translateY(0%);
+}
+.imgbx img
+{
+    max-width: 310px;
+    transform: rotate(30deg);
+    box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.493),
+                0px 0px 10px rgba(0, 0, 0, 0.336),
+            inset  -10px -10px 15px rgba(0, 0, 0, 0.493),
+            inset 10px 10px 20px rgba(255, 253, 253, 0.192);
+}
+.contentbx
+{
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card:hover .contentbx
+{
+    bottom: 50px;
+}
+.contentbx h2
+{
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-style: italic;
+}
+.contentbx .size
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    opacity: 0;
+    transition: .3s;
+
+}
+.card:hover .contentbx .size
+{
+    opacity: 1;
+    transition-delay: .2s;
+}
+.contentbx .size
+{
+    width: 300px;
+}
+.contentbx .size h3
+{
+    color: #fff;
+    font-weight: 100;
+    margin-right:5px;
+    letter-spacing: 2px;
+}
+.contentbx .size span a
+{
+    display: inline-block;
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 5px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.082);
+    margin-left: 10px;
+    width: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 2px;
+}
+.contentbx .size span a:hover
+{
+    color: chartreuse;
+}
+.contentbx .btn
+{
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+    transition: .3s;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    background: rgba(97, 104, 133, 0.171);
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-weight: bold;       
+}
+.contentbx .btn::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(150, 148, 148, 0.295);
+    z-index: -1;
+}
+.contentbx .btn:hover
+{
+    color: rgb(143, 250, 36);
+    text-shadow:  0px 0px 10px rgb(143, 250, 36),
+                0px 0px 20px rgb(143, 250, 36),
+                0px 0px 40px rgb(143, 250, 36);
+                transition-delay: 0;
+    box-shadow: 0px 0px 2px rgb(143, 250, 36),
+                0px 0px 7px rgb(143, 250, 36),
+                0px 0px 30px rgba(143, 250, 36, 0.267);   
+}
+.card:hover .contentbx .btn
+{
+    opacity: 1;
+    bottom: -15px;
+    transition-delay: .2s;
+}
+
+
+
+
+
+
+
+
+
